@@ -11,9 +11,9 @@ app = Flask(__name__)
 
 @app.route('/', methods=['GET']) #only '/' means the home page
 def home_page():
-	return render_template('index.html')
+	return render_template('index.html')# means go and fetch the html index file
 
-@app.route('/<name>')
+@app.route('/<name>') #it is for giving out a name after '/ ' on main url
 def profile(name):
 	return render_template('index.html', name=name)
 
